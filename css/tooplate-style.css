@@ -234,7 +234,7 @@ b, strong {
   line-height: 32px;
   outline: none;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 10%;
 }
 .navbar-toggler:focus {
   outline: none;

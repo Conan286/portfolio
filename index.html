@@ -15,6 +15,9 @@
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
+      <!-- Thêm Firebase SDK đúng bản UMD -->
+      <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
     
 <!--
 
@@ -180,8 +183,9 @@ https://www.tooplate.com/view/2115-marvel
                             <span>2022</span>
                         </div>
                         <div class="timeline-info">
+                          
                             <h3><span>Programming in Python</span><small>Coursera</small></h3>
-                            <p>CERTIFICATES TO PTIT STUDENTS WHO SUCCESSFULLY COMPLETE PROGRAMMING IN PYTHON COURSERA</p>
+                            <p><a rel="nofollow" href="https://github.com/Conan286/Python_PTIT">CERTIFICATES</a> TO PTIT STUDENTS WHO SUCCESSFULLY COMPLETE PROGRAMMING IN PYTHON COURSERA</p>
                         </div>
                     </div>
 
@@ -191,7 +195,7 @@ https://www.tooplate.com/view/2115-marvel
                              </div>
                              <div class="timeline-info">
                                   <h3><span>SAMSUNG Application Of Algorithms</span><small>PTIT</small></h3>
-                                  <p>AWARDING CERTIFICATES TO PTIT STUDENTS WHO SUCCESSFULLY COMPLETE THE APPLIED ALGORITHM COURSE IN 2022 SUPPORTED BY SAMSUNG</p>
+                                  <p><a rel="nofollow" href="https://www.facebook.com/stories/615903146996621/?source=profile_highlight">AWARDING CERTIFICATES</a> TO PTIT STUDENTS WHO SUCCESSFULLY COMPLETE THE APPLIED ALGORITHM COURSE IN 2022 SUPPORTED BY SAMSUNG</p>
                              </div>
                         </div>
 
@@ -251,14 +255,18 @@ https://www.tooplate.com/view/2115-marvel
           
           <div class="col-lg-5 mr-lg-5 col-12">
             <div class="google-map w-100">
-              <img src=" https://wordologybymbr.wordpress.com/wp-content/uploads/2020/07/contact-me.jpg?w=640 " width="400" height="300" frameborder="0" style="border:0" allowfullscreen></img>
+              <a href="https://www.facebook.com/ConanPtit/" target="_blank">
+                <img src="https://wordologybymbr.wordpress.com/wp-content/uploads/2020/07/contact-me.jpg?w=640" 
+                     width="400" height="300" style="border:0" alt="Contact Me">
+            </a>
+            
             </div>
 
             <div class="contact-info d-flex justify-content-between align-items-center py-4 px-lg-5">
                 <div class="contact-info-item">
-                  <h3 class="mb-3 text-white">Contact</h3>
-                  <p class="footer-text mb-0"><a href="https://www.facebook.com/ConanPtit/"  target="_blank" >Facebook</a></p>
-                  <p><a href="https://github.com/Conan286"  target="_blank" >Github</a></p>
+                  <h3 class="mb-3 text-white">Site Traffic</h3>
+                  <p class="copyright-text text-center">Total Visits: <span id="visitCount">0</span> </p>     
+                  <p class="copyright-text text-center">Online Users: <span id="onlineCount">0</span> </p> 
                 </div>
 
                 <ul class="social-links">
@@ -271,7 +279,7 @@ https://www.tooplate.com/view/2115-marvel
 
           <div class="col-lg-6 col-12">
             <div class="contact-form">
-              <h2 class="mb-4">Interested to work together? Let's talk</h2>
+              <h2 class="mb-4">Do you have something to share with me? Let's talk!</h2>
 
               <form action="" method="get">
                 <div class="row">
@@ -299,19 +307,100 @@ https://www.tooplate.com/view/2115-marvel
       </div>
     </section>
 
-    <!-- FOOTER -->
-     <footer class="footer py-5">
-          <div class="container">
-               <div class="row">
 
-                    <div class="col-lg-12 col-12">                                
-                        <p class="copyright-text text-center">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All rights reserved</p>
-                        <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://www.facebook.com/ConanPtit">Quang Huy✅</a></p>
-                    </div>
-                    
-               </div>
+
+
+     <!-- FOOTER -->
+<footer class="footer py-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 col-12 text-center"> 
+            <ul class="copyright-text">
+              <li style="display: inline-block;"><a href="https://www.facebook.com/ConanPtit/" style="font-size: 28px;"  target="_blank"  class="uil uil-facebook" data-toggle="tooltip" data-placement="right" title="Facebook"></a></li>
+              <li style="display: inline-block;"><a href="https://www.instagram.com/queenhy2003/" style="font-size: 28px;"  target="_blank"  class="uil uil-instagram" data-toggle="tooltip" data-placement="left" title="Instagram"></a></li>
+              <li style="display: inline-block;"><a href="https://www.facebook.com/messages/t/100016789864245" style="font-size: 28px;" target="_blank" class="uil uil-message" data-toggle="tooltip" data-placement="left" title="Message"></a></li>
+         </ul>
+
+             <p class="copyright-text text-center">Total Visits: <span id="visitCount1">0</span> | Online Users: <span id="onlineCount1">0</span>  </p>     
+             <p class="copyright-text">Copyright &copy; <script>document.write(new Date().getFullYear());</script>. All rights reserved</p>
+             <p class="copyright-text">Designed by <a rel="nofollow" href="https://www.facebook.com/ConanPtit">Quang Huy ✅</a></p>
           </div>
-     </footer>
+      </div>
+  </div>
+</footer>
+
+
+ 
+ 
+     <script>
+      // Cấu hình Firebase
+      const firebaseConfig = {
+          apiKey: "AIzaSyCUZSYXlIoAOhZhWxafdN44StZZEzjcR3A",
+          authDomain: "portfolio-6e82b.firebaseapp.com",
+          databaseURL: "https://portfolio-6e82b-default-rtdb.firebaseio.com",
+          projectId: "portfolio-6e82b",
+          storageBucket: "portfolio-6e82b.firebasestorage.app",
+          messagingSenderId: "713795188044",
+          appId: "1:713795188044:web:39ca9b9a16240cb7f38be9",
+          measurementId: "G-12GV78F9P5"
+      };
+  
+      // Khởi tạo Firebase
+      if (!window.firebaseAppInitialized) {
+          firebase.initializeApp(firebaseConfig);
+          window.firebaseAppInitialized = true;
+      }
+  
+      const db = firebase.database();
+
+
+
+// ✅ Hàm cập nhật số người online
+function updateOnlineUsers() {
+    const userSessionRef = db.ref("online_sessions").push();
+    userSessionRef.set(true);
+
+    // Khi người dùng rời trang, xóa session này
+    userSessionRef.onDisconnect().remove();
+
+    // Đếm số session và cập nhật vào stats/online_users
+    db.ref("online_sessions").on("value", (snapshot) => {
+        const onlineCount = snapshot.numChildren();
+        db.ref("stats/online_users").set(onlineCount);
+    });
+}
+
+// ✅ Gọi hàm cập nhật online khi mở trang
+updateOnlineUsers();
+
+  
+      // Hàm tăng lượt truy cập
+      function increaseVisitCount() {
+          const visitRef = db.ref("stats/total_visits");
+  
+          visitRef.transaction((current) => {
+              return (current || 0) + 1; // Nếu current là null thì dùng 0, sau đó +1
+          });
+      }
+  
+      // 👉 Gọi hàm tăng lượt truy cập ngay khi trang tải xong
+      increaseVisitCount();
+  
+      // Đọc tổng số lượt truy cập từ Firebase
+      db.ref("stats/total_visits").on("value", (snapshot) => {
+          console.log("Tổng lượt truy cập:", snapshot.val()); // Log kiểm tra
+          document.getElementById("visitCount").innerText = snapshot.val() || "Error Loading";
+          document.getElementById("visitCount1").innerText = snapshot.val() || "Error Loading";
+      });
+  
+      // Đọc số người đang online từ Firebase
+      db.ref("stats/online_users").on("value", (snapshot) => {
+          console.log("Số người online:", snapshot.val()); // Log kiểm tra
+          document.getElementById("onlineCount").innerText = snapshot.val() || "Error Loading";
+          document.getElementById("onlineCount1").innerText = snapshot.val() || "Error Loading";
+      });
+  </script>
+  
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -321,6 +410,14 @@ https://www.tooplate.com/view/2115-marvel
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+ 
+
+
+
+    
+    
+    
+
 
   </body>
 </html>
